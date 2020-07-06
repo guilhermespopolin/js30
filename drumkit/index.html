@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drumkit</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="keyboard">
+      <div data-key="65" class="key">
+        <kbd class="key__value">A</kbd>
+        <div class="key__desc">Clap</div>
+      </div>
+      <div data-key="83" class="key">
+        <kbd class="key__value">S</kbd>
+        <div class="key__desc">Hihat</div>
+      </div>
+      <div data-key="68" class="key">
+        <kbd class="key__value">D</kbd>
+        <div class="key__desc">Openhat</div>
+      </div>
+    </div>
+
+    <audio
+      data-key="65"
+      src="http://bigsamples.free.fr/d_kit/clap/cr8kclap.wav"
+    ></audio>
+    <audio
+      data-key="83"
+      src="http://cd.textfiles.com/maxsounds/WAV/EFEITOS/OH75.WAV"
+    ></audio>
+    <audio
+      data-key="68"
+      src="http://www.electrongate.com/dmxfiles/other/909hatop.wav"
+    ></audio>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
