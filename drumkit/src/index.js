@@ -6,7 +6,7 @@ function handleStartPlay(e) {
   if (audio) {
     audio.currentTime = 0; // rewind to start
     key.classList.add("key--playing");
-    // audio.play();
+    audio.play();
   }
 }
 
