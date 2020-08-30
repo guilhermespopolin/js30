@@ -2,7 +2,7 @@
   --white: #fff;
   --black: #000;
   --primary: #091921;
-  --secondary: #FF8900;
+  --secondary: #ff8900;
   --dark-gray: #767676;
 }
 
@@ -29,15 +29,14 @@ body {
   border: 4px solid var(--primary);
   border-radius: 50%;
   box-shadow: 0px -16px 16px rgba(255, 255, 255, 0.05),
-              inset 0px -16px 16px rgba(255, 255, 255, 0.05),
-              0 16px 16px rgba(0, 0, 0, 0.3),
-              inset 0px 16px 16px rgba(0, 0, 0, 0.3);
+    inset 0px -16px 16px rgba(255, 255, 255, 0.05),
+    0 16px 16px rgba(0, 0, 0, 0.3), inset 0px 16px 16px rgba(0, 0, 0, 0.3);
   background-image: url("../img/clock.png");
   background-size: cover;
 }
 
 .clock::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 9;
   height: 3.5%;
@@ -68,6 +67,7 @@ body {
   width: 25%;
   height: 1.7%;
   background-color: var(--white);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .clock__hand--hour {
@@ -75,6 +75,7 @@ body {
   width: 20%;
   height: 2%;
   background-color: var(--white);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* Extra small devices (phones, 600px and down) */
