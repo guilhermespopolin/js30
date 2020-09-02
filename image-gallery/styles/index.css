@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Harry Potter';
+  src: url("../fonts/harry-potter.ttf");
+}
+
+@font-face {
+  font-family: 'Cochin';
+  src: url("../fonts/cochin.otf");
+}
+
+
+:root {
+  --white: #ffffff;
+  --silver: #d6d3cc;
+  --gold: #f3cf09;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,38 +30,103 @@ body {
 }
 
 .gallery__panel {
+  position: relative;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3);
   transition: flex 0.4s ease-in-out;
-}
-
-.gallery__panel:hover {
   cursor: pointer;
+  color: var(--white);
+  overflow: hidden;
 }
 
-.gallery__panel:nth-child(1) {
-  background-image: url("https://source.unsplash.com/N46IkbWUvMU/1600x900");
+.gallery__panel__header {
+  width: 100%;
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  );
+  transition: transform 0.5s;
+  transform: translateY(-100%);
 }
 
-.gallery__panel:nth-child(2) {
-  background-image: url("https://source.unsplash.com/EvKBHBGgaUo/1600x900");
+.gallery__panel__header__title {
+  margin: 0 0 0.5rem 0;
+  font-family: 'Harry Potter';
+  font-size: 4.5rem;
+  color: var(--gold);
 }
 
-.gallery__panel:nth-child(3) {
-  background-image: url("https://source.unsplash.com/znoL1m6MD_k/1600x900");
+.gallery__panel__header__subtitle {
+  font-family: 'Cochin';
+  font-size: 2rem;
+  color: var(--silver);
 }
 
-.gallery__panel:nth-child(4) {
-  background-image: url("https://source.unsplash.com/SLOm_cfWTT4/1600x900");
-}
-
-.gallery__panel:nth-child(5) {
-  background-image: url("https://source.unsplash.com/q3rUTmpZB-Q/1600x900");
+.gallery__panel__description {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  transform: translateY(100%);
+  transition: 0.5s;
 }
 
 .gallery__panel--open {
   flex: 3;
+}
+
+.gallery__panel--active
+.gallery__panel__header {
+  transform: translateY(0);
+}
+
+.gallery__panel--active
+.gallery__panel__description {
+  transform: translateY(0);
+}
+
+.gallery__panel[data-movie="harry potter and the sorcerer's stone"] {
+  background-image: url("../img/harry-potter-1.jpg");
+}
+
+.gallery__panel[data-movie="harry potter and the chamber of secrets"] {
+  background-image: url("../img/harry-potter-2.jpg");
+}
+
+.gallery__panel[data-movie="harry potter and the prisioner of askaban"] {
+  background-image: url("../img/harry-potter-3.jpg");
+}
+
+.gallery__panel[data-movie="harry potther and the goblet of fire"] {
+  background-image: url("../img/harry-potter-4.jpg");
+}
+
+.gallery__panel[data-movie="harry potter and the order of the phoenix"] {
+  background-image: url("../img/harry-potter-5.jpg");
+}
+
+.gallery__panel[data-movie="harry potter and the half-blood prince"] {
+  background-image: url("../img/harry-potter-6.jpg");
+}
+
+.gallery__panel[data-movie="harry potter and the deathly hallows"] {
+  background-image: url("../img/harry-potter-7.jpg");
 }
