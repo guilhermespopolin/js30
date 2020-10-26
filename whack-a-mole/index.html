@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack a Mole</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">Whack a Mole</h1>
+    <button class="play">Start</button>
+  </header>
+  <section class="scoreboard">
+    <div class="scoreboard__item">
+      <img class="scoreboard__item__icon" src="img/trophy.svg" alt="Trophy" />
+      <span data-item="score" class="scoreboard__item__value"></span>
+    </div>
+    <div class="scoreboard__item">
+      <img class="scoreboard__item__icon" src="img/timer.svg" alt="Trophy" />
+      <span data-item="timer" class="scoreboard__item__value"></span>
+    </div>
+  </section>
+  <main class="game">
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+    <div class="hole">
+      <div class="mole"></div>
+    </div>
+  </main>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/xstate@4.13.0/dist/xstate.min.js"></script>
+  <script type="module" src="src/index.js"></script>
+</html>
