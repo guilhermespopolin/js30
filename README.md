@@ -1,6 +1,6 @@
 # js30
 
-Vanilla JS projects for the sake of praticing, based on Wes Bos playlist: https://bit.ly/3hs6FzF
+"Almost" Vanilla JS projects for fun, based on Wes Bos playlist: https://bit.ly/3hs6FzF
 
 ## Projetcs
 
