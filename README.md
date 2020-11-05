@@ -11,3 +11,5 @@
 [image-gallery](https://guilhermespopolin.github.io/js30/image-gallery)
 
 [speedometer](https://guilhermespopolin.github.io/js30/speedometer/)
+
+[whack-a-mole](https://guilhermespopolin.github.io/js30/whack-a-mole/)
