@@ -62,9 +62,11 @@ function createWhackAMoldeMachine(time = 10) {
               ],
             },
             BONK: {
-              actions: assign({
-                score: (context) => context.score + 1,
-              }),
+              actions: assign((context) => ({
+                score: context.score + 1,
+                lastActiveHole: context.activeHole,
+              })),
+              cond: (context) => context.lastActiveHole !== context.activeHole,
             },
           },
           entry: send("PEEP"),
@@ -93,7 +95,7 @@ function createWhackAMoldeMachine(time = 10) {
     },
     {
       delays: {
-        peepDelay: () => getRandomInt(600, 1000),
+        peepDelay: () => getRandomInt(800, 1000),
       },
     }
   );
